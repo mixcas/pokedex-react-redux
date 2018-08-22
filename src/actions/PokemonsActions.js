@@ -6,13 +6,13 @@ import { POKEMONS_REQUESTED, POKEMONS_RECIEVED } from '../reducers/PokemonsReduc
 /**
  * Get Pokemons
  */
-export const fetchPokemons = (url = 'https://pokeapi.co/api/v2/pokemon') => {
+export const fetchPokemons = (search = '') => {
   return dispatch => {
     dispatch({
       type: POKEMONS_REQUESTED,
     });
 
-    axios.get(url)
+    axios.get('https://pokeapi.co/api/v2/pokemon' + search)
       .then( response => {
         console.log(response);
         return dispatch({

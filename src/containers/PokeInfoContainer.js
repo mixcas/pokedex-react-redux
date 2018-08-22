@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+
+// Actions
 import { fetchPokemon } from '../actions/PokemonActions.js';
+
+// Components
 import PokeCard from '../components/PokeCard';
 import Loading from '../components/Loading';
 

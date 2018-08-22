@@ -1,12 +1,17 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+
+// Actions
 import { fetchPokemons } from '../actions/PokemonsActions';
+
+//Components
 import PokeList from '../components/PokeList';
 
 class PokeListContainer extends Component {
 	componentDidMount() {
-		this.props.fetchPokemons();
+    const { search } = this.props;
+		this.props.fetchPokemons(search);
 	}
 
 	render() {
@@ -22,6 +27,7 @@ class PokeListContainer extends Component {
 const mapStateToProps = state => ({
 	isFetching: state.pokemonList.isFetching,
 	pokemonList: state.pokemonList,
+  search: state.router.location.search,
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({
@@ -31,4 +37,4 @@ const mapDispatchToProps = dispatch => bindActionCreators({
 export default connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(PokeListContainer)
+)(PokeListContainer);
