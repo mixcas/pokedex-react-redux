@@ -4,6 +4,7 @@ import { Route } from 'react-router';
 // Components
 import Header from './Header';
 import PokeListContainer from '../containers/PokeListContainer';
+import PokeInfoContainer from '../containers/PokeInfoContainer';
 
 class App extends Component {
   render() {
@@ -11,6 +12,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <Route exact path="/" component={PokeListContainer} />
+        <Route exact path="/:name" component={PokeInfoContainer} />
       </div>
     );
   }

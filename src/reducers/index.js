@@ -3,9 +3,11 @@ import { combineReducers } from 'redux'
 
 // Reducers
 import { pokemonsReducer } from './PokemonsReducer';
+import { pokemonReducer } from './PokemonReducer';
 
 const appReducer = combineReducers({
   pokemonList: pokemonsReducer,
+  currentPokemon: pokemonReducer,
 })
 
 // Setup root reducer
