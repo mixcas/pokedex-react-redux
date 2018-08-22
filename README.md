@@ -6,7 +6,8 @@ This project uses:
 - react-redux
 - react-router-dom
 - connected-react-router
-- redux-thunk history
+- redux-thunk
+- history
 
 # Run
 
