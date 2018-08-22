@@ -1,9 +1,11 @@
-/**
-* Combine All Reducers
-*/
 import { combineReducers } from 'redux'
 
+
+// Reducers
+import { pokemonsReducer } from './PokemonsReducer';
+
 const appReducer = combineReducers({
+  pokemonList: pokemonsReducer,
 })
 
 // Setup root reducer
