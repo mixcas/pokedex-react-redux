@@ -1361,6 +1361,12 @@ camel-case@3.0.x:
     no-case "^2.2.0"
     upper-case "^1.1.1"
 
+camelcase-keys-object@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/camelcase-keys-object/-/camelcase-keys-object-1.2.2.tgz#5f3b2f9f6766859337b9bfb33f7a2f970fc9256f"
+  dependencies:
+    js-camelcase "^1.1.0"
+
 camelcase-keys@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/camelcase-keys/-/camelcase-keys-2.1.0.tgz#308beeaffdf28119051efa1d932213c91b8f92e7"
@@ -4108,6 +4114,56 @@ js-base64@^2.1.9:
   version "2.4.8"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.4.8.tgz#57a9b130888f956834aa40c5b165ba59c758f033"
 
+js-camelcase@^1.1.0, js-camelcase@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/js-camelcase/-/js-camelcase-1.1.1.tgz#8aa02552556f8f7affbc51c11aeb08734b699713"
+
+js-convert-case@^3.1.6:
+  version "3.1.6"
+  resolved "https://registry.yarnpkg.com/js-convert-case/-/js-convert-case-3.1.6.tgz#5ada5ece970cf89c6232097b4f2010d31ffb987f"
+  dependencies:
+    camelcase-keys-object "^1.2.2"
+    js-camelcase "^1.1.1"
+    js-dotcase "^1.2.1"
+    js-headercase "^1.2.1"
+    js-pascalcase "^1.2.1"
+    js-pathcase "^1.2.1"
+    js-sentencecase "^1.2.1"
+    js-snakecase "^1.2.0"
+    js-textcase "^1.2.2"
+    lowercase-keys-object "^1.1.3"
+    pascalcase-keys-object "^1.0.1"
+    snakecase-keys-object "^1.0.2"
+    uppercase-keys-object "^1.1.4"
+
+js-dotcase@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/js-dotcase/-/js-dotcase-1.2.1.tgz#7702c22a00c70f325755296d8bc72b652c9af4af"
+
+js-headercase@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/js-headercase/-/js-headercase-1.2.1.tgz#812974e46e0cd1a4634194bfcf0ceb1b94a9efae"
+
+js-pascalcase@^1.0.0, js-pascalcase@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/js-pascalcase/-/js-pascalcase-1.2.1.tgz#c5ea1bb23c13a54016e400f0d718aec8dbf066ee"
+
+js-pathcase@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/js-pathcase/-/js-pathcase-1.2.1.tgz#7e43fc3e6885a60635ed139073c34d0e8e120bf4"
+
+js-sentencecase@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/js-sentencecase/-/js-sentencecase-1.2.1.tgz#e16174901309b3d37ae38c00012fdbd88e1fe34d"
+
+js-snakecase@^1.1.0, js-snakecase@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/js-snakecase/-/js-snakecase-1.2.0.tgz#61cf6f3d2e931757a49ce05197e9acd1448192b8"
+
+js-textcase@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/js-textcase/-/js-textcase-1.2.2.tgz#b66b1f36a60e1a7ae35d8561290ecd67a1f9a83a"
+
 "js-tokens@^3.0.0 || ^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
@@ -4498,6 +4554,10 @@ loud-rejection@^1.0.0:
 lower-case@^1.1.1:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/lower-case/-/lower-case-1.1.4.tgz#9a2cabd1b9e8e0ae993a4bf7d5875c39c42e8eac"
+
+lowercase-keys-object@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/lowercase-keys-object/-/lowercase-keys-object-1.1.3.tgz#60cb541ab8cb3f4fb3c7a0b9ef6bbd59f29c7417"
 
 lowercase-keys@^1.0.0:
   version "1.0.1"
@@ -5158,6 +5218,12 @@ parse5@^1.5.1:
 parseurl@~1.3.2:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/parseurl/-/parseurl-1.3.2.tgz#fc289d4ed8993119460c156253262cdc8de65bf3"
+
+pascalcase-keys-object@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/pascalcase-keys-object/-/pascalcase-keys-object-1.0.1.tgz#0f71b49d2e0a00588641f710324002e1af64879f"
+  dependencies:
+    js-pascalcase "^1.0.0"
 
 pascalcase@^0.1.1:
   version "0.1.1"
@@ -6446,6 +6512,12 @@ slice-ansi@1.0.0:
   dependencies:
     is-fullwidth-code-point "^2.0.0"
 
+snakecase-keys-object@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/snakecase-keys-object/-/snakecase-keys-object-1.0.2.tgz#1015287ce910dc1bd6e4941a48ee7b75f3ad7b59"
+  dependencies:
+    js-snakecase "^1.1.0"
+
 snapdragon-node@^2.0.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/snapdragon-node/-/snapdragon-node-2.1.1.tgz#6c175f86ff14bdb0724563e8f3c1b021a286853b"
@@ -7063,6 +7135,10 @@ update-notifier@^2.3.0:
 upper-case@^1.1.1:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/upper-case/-/upper-case-1.1.3.tgz#f6b4501c2ec4cdd26ba78be7222961de77621598"
+
+uppercase-keys-object@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/uppercase-keys-object/-/uppercase-keys-object-1.1.4.tgz#8f599c39bc20a1c47c8fc2744667b9db9ed5862f"
 
 uri-js@^4.2.2:
   version "4.2.2"
