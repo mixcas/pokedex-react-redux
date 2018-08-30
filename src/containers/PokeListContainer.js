@@ -9,32 +9,32 @@ import { fetchPokemons } from '../actions/PokemonsActions';
 import PokeList from '../components/PokeList';
 
 class PokeListContainer extends Component {
-	componentDidMount() {
+  componentDidMount() {
     const { search } = this.props;
-		this.props.fetchPokemons(search);
-	}
+    this.props.fetchPokemons(search);
+  }
 
-	render() {
-		const { isFetching, pokemonList } = this.props;
+  render() {
+    const { isFetching, pokemonList } = this.props;
 
-		if(isFetching) {
-			return <p>Loading...</p>
-		}
-		return <PokeList pokemonList={pokemonList} />
-	}
+    if(isFetching) {
+      return <p>Loading...</p>
+    }
+    return <PokeList pokemonList={pokemonList} />
+  }
 }
 
 const mapStateToProps = state => ({
-	isFetching: state.pokemonList.isFetching,
-	pokemonList: state.pokemonList,
+  isFetching: state.pokemonList.isFetching,
+  pokemonList: state.pokemonList,
   search: state.router.location.search,
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-	fetchPokemons,
+  fetchPokemons,
 }, dispatch)
 
 export default connect(
-	mapStateToProps,
-	mapDispatchToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(PokeListContainer);

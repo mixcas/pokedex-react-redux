@@ -10,36 +10,36 @@ import PokeCard from '../components/PokeCard';
 import Loading from '../components/Loading';
 
 class PokeInfoContainer extends Component {
-	componentDidMount() {
-		const { match: { url }} = this.props;
+  componentDidMount() {
+    const { match: { url }} = this.props;
 
     // Remove slash at the beggining
-		const pokemonName = url.substring(1, url.length);
+    const pokemonName = url.substring(1, url.length);
 
     // Fetch Pokemon
-		this.props.fetchPokemon(pokemonName);
-	}
+    this.props.fetchPokemon(pokemonName);
+  }
 
-	render() {
-		const { isFetching, pokemonInfo } = this.props;
+  render() {
+    const { isFetching, pokemonInfo } = this.props;
 
-		if(isFetching) {
-			return <Loading />
-		}
-		return <PokeCard info={pokemonInfo} />
-	}
+    if(isFetching) {
+      return <Loading />
+    }
+    return <PokeCard info={pokemonInfo} />
+  }
 }
 
 const mapStateToProps = state => ({
-	isFetching: state.currentPokemon.isFetching,
-	pokemonInfo: state.currentPokemon.info,
+  isFetching: state.currentPokemon.isFetching,
+  pokemonInfo: state.currentPokemon.info,
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-	fetchPokemon,
+  fetchPokemon,
 }, dispatch)
 
 export default connect(
-	mapStateToProps,
-	mapDispatchToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(PokeInfoContainer)

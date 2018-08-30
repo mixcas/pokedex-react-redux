@@ -7,28 +7,28 @@ import PokeListItem from './PokeListItem';
 import Pagination from './Pagination';
 
 const styles = theme => ({
-	root: {
-		flexGrow: 1,
-	},
-	card: {
-		width: '100%',
-	},
-	cardActions: {
-		textAlign: 'right',
-	}
+  root: {
+    flexGrow: 1,
+  },
+  card: {
+    width: '100%',
+  },
+  cardActions: {
+    textAlign: 'right',
+  }
 });
 
 const PokeList = props => {
-	const { classes, pokemonList } = props;
-	const { results, next, previous} = pokemonList;
-	return (
-		<Grid container className={classes.Root} spacing={24} justify={'space-around'}>
-			{results.map(value => (
-				<PokeListItem pokemon={value} key={value.name} />
-			))}
+  const { classes, pokemonList } = props;
+  const { results, next, previous} = pokemonList;
+  return (
+    <Grid container className={classes.Root} spacing={24} justify={'space-around'}>
+      {results.map(value => (
+        <PokeListItem pokemon={value} key={value.name} />
+      ))}
       { /* next || previous ? <Pagination next={next} previous={previous} /> : null */ }
-		</Grid>
-	);
+    </Grid>
+  );
 }
 
 export default withStyles(styles)(PokeList);

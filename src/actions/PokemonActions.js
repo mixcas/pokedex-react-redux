@@ -4,8 +4,8 @@ import axios from 'axios';
 import { POKEMON_ALREADY_LOADED, POKEMON_REQUESTED, POKEMON_RECIEVED } from '../reducers/PokemonReducer.js';
 
 /**
-* Get Pokemon
-*/
+ * Get Pokemon
+ */
 export const fetchPokemon = pokemonName => {
   return (dispatch, getState) => {
     const { currentPokemon } = getState();
